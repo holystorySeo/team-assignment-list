@@ -11,7 +11,7 @@
 - [https://www.wanted.co.kr/events/pre_onboarding_course_8](https://www.wanted.co.kr/events/pre_onboarding_course_8)
 
 ## 과제 소개
-## 1. 카트라이더 랭킹 페이지 클론
+## 1. 카트라이더 랭킹 페이지
 ### 작업 성과
 - Progress circle chart (파일위치: /src/components/atoms/ProgressCircle.js [코드 보기](https://github.com/wanted-pre-onboarding-09/wanted-codestates-project-9-2/blob/dev/src/components/atoms/ProgressCircle.js))
     - 컴포넌트 재사용성 고려하여 기능 구현<br>
