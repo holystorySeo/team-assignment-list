@@ -76,7 +76,7 @@
   <img src="https://user-images.githubusercontent.com/87353284/157576370-3819910b-46c3-41dd-b87e-ad6311eb1376.gif" width="20%"/>
 
 ### 개선 필요사항
-- topRank에 map함수로 적용하면 배열 전체를 순회하는 부분하기 때문에 1 ~ 3위까지만 배열을 자르고 그 데이터 map으로 순회하게 하여 리소스 효율화
+- 상세 페이지 이미지 슬라이드 기능 고도화(마우스 드래그에 따른 이미지 이동)
 ### 배포 링크
 [https://balaan9.netlify.app](https://balaan9.netlify.app)
 ### 저장소 링크
