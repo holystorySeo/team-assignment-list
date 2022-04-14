@@ -81,3 +81,35 @@
 [https://balaan9.netlify.app](https://balaan9.netlify.app)
 ### 저장소 링크
 [https://github.com/wanted-pre-onboarding-09/wanted-codestates-project-9-9](https://github.com/wanted-pre-onboarding-09/wanted-codestates-project-9-9)
+    
+## 3. 해시업 폼 구현하기
+### 작업 성과
+- (폴더위치: src/components/atoms/ [ 보기](https://github.com/wanted-pre-onboarding-09/wanted-codestates-project-9-7-1/tree/dev/src/components/atoms))
+- 폼 생성하기 페이지 마크업과 스타일링
+  - 필수 옵션이 모두 채워지면 우측 하단 '폼 저장' 버튼이 활성화
+    
+  <img src="https://user-images.githubusercontent.com/87353284/158739152-0f2e500a-4a24-40e5-9821-8624185059ec.png" width="30%" />
+
+- 필드 추가와 삭제
+   - 리덕스 툴킷을 활용하여 전체 필드 리스트를 갱신
+   - 개별 컴포넌트별로 옵션 관련 정보 전역에서 별도 관리(Redux-Toolkit)
+    
+    <img src="https://user-images.githubusercontent.com/87353284/158739879-e9f2fe91-ec10-4803-ad78-bbbe139eb4c9.gif" width="30%" />
+
+- Drag & Drop
+   - Drag&Drop API를 이용
+    
+    <img src="https://user-images.githubusercontent.com/87353284/158740442-dd388761-eec2-46ed-9ff8-5f11579feec5.gif" width="30%" />
+
+- 폼 저장
+   - 저장 후 전체 정보 초기화
+    
+    <img src="https://user-images.githubusercontent.com/87353284/158740545-53d43689-814f-491a-a7f0-d08e73850d2c.gif" width="30%" />
+
+### 개선 필요사항
+- 해시업 폼 UX 제고 위한 CSS 스타일링
+- Drag & Drop에서 Drop 전 Drag만 해도 각 필드의 위치가 바뀌게 하는 기능 고도화
+### 배포 링크
+[https://datable-9.netlify.app](https://datable-9.netlify.app)
+### 저장소 링크
+[https://github.com/wanted-pre-onboarding-09/wanted-codestates-project-9-7-1](https://github.com/wanted-pre-onboarding-09/wanted-codestates-project-9-7-1)
