@@ -84,7 +84,7 @@
     
 ## 3. 해시업 폼 구현하기
 ### 작업 성과
-- (폴더위치: src/components/atoms/ [ 보기](https://github.com/wanted-pre-onboarding-09/wanted-codestates-project-9-7-1/tree/dev/src/components/atoms))
+- (폴더위치: src/components/atoms/ [코드 보기](https://github.com/wanted-pre-onboarding-09/wanted-codestates-project-9-7-1/tree/dev/src/components/atoms))
 - 폼 생성하기 페이지 마크업과 스타일링
   - 필수 옵션이 모두 채워지면 우측 하단 '폼 저장' 버튼이 활성화
     
