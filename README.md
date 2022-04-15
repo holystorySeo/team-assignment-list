@@ -54,8 +54,8 @@
 [https://wanted-pre-onboarding-09.github.io/wanted-codestates-project-9-2](https://wanted-pre-onboarding-09.github.io/wanted-codestates-project-9-2)
 ### 저장소 링크
 [https://github.com/wanted-pre-onboarding-09/wanted-codestates-project-9-2](https://github.com/wanted-pre-onboarding-09/wanted-codestates-project-9-2)
-
-## 2. 쇼피몰 리뷰 등록과 확인 페이지
+    <br><br>
+## 2. 쇼핑몰 리뷰 등록과 확인 페이지
 ### 작업 성과
 - 상세 페이지 마크업과 스타일링 작업 (폴더위치: src/components/organisms/detail [코드 보기](https://github.com/wanted-pre-onboarding-09/wanted-codestates-project-9-9/tree/dev/src/components/organisms/detail))
   
@@ -81,7 +81,7 @@
 [https://balaan9.netlify.app](https://balaan9.netlify.app)
 ### 저장소 링크
 [https://github.com/wanted-pre-onboarding-09/wanted-codestates-project-9-9](https://github.com/wanted-pre-onboarding-09/wanted-codestates-project-9-9)
-    
+     <br><br>
 ## 3. 해시업 폼 구현하기
 ### 작업 성과
 - (폴더위치: src/components/atoms/ [코드 보기](https://github.com/wanted-pre-onboarding-09/wanted-codestates-project-9-7-1/tree/dev/src/components/atoms))
@@ -92,7 +92,7 @@
 
 - 필드 추가와 삭제
    - 리덕스 툴킷을 활용하여 전체 필드 리스트를 갱신
-   - 개별 컴포넌트별로 옵션 관련 정보 전역에서 별도 관리(Redux-Toolkit)
+   - 개별 컴포넌트별로 옵션 관련 상태 전역에서 별도 관리
     
     <img src="https://user-images.githubusercontent.com/87353284/158739879-e9f2fe91-ec10-4803-ad78-bbbe139eb4c9.gif" width="30%" />
 
@@ -113,7 +113,7 @@
 [https://datable-9.netlify.app](https://datable-9.netlify.app)
 ### 저장소 링크
 [https://github.com/wanted-pre-onboarding-09/wanted-codestates-project-9-7-1](https://github.com/wanted-pre-onboarding-09/wanted-codestates-project-9-7-1)
-
+ <br><br>
 ## 4. 기업 & 개인 fit 진달 결과 페이지
 ### 작업 성과
 - 모두/본인/회사 Tab 컴포넌트 구현 (파일 위치: src/components/TabSection.vue [코드 보기](https://github.com/wanted-pre-onboarding-09/wanted-codestates-project-9-11/blob/dev/src/components/TabSection.vue))
@@ -122,3 +122,22 @@
    - `$emit` 메소드로 Tab index를 ‘자식 컴포넌트(`TabSection.vue`)’에서 ‘부모 컴포넌트(`App.vue`)’로 전달
 
      <img src="https://user-images.githubusercontent.com/87353284/163503122-bc1ed745-6bf8-4525-bbbd-b4fd2427ff82.gif" width="30%" />
+### 배포 링크
+[https://gravylab.netlify.app](https://gravylab.netlify.app)
+### 저장소 링크
+[https://github.com/wanted-pre-onboarding-09/wanted-codestates-project-9-11](https://github.com/wanted-pre-onboarding-09/wanted-codestates-project-9-11)
+ <br><br>
+## 5. 모바일 앱 내 한 섹션 웹 페이지 화
+### 작업 성과
+- 원자 단위 컴포넌트 keyframes 애니메이션 작업
+  - 좋아요 버튼 (파일 위치: src/components/atoms/Likes.js [코드 보기](https://github.com/wanted-pre-onboarding-09/wanted-codestates-project-9-4/blob/dev/src/components/atoms/Likes.js))
+    
+    <img src="https://user-images.githubusercontent.com/87353284/163504670-45e0fee1-1441-4054-88f5-11b4f191bbb7.gif" width="20%" />
+    
+  - 공유하기 버튼 (파일 위치: src/components/atoms/Share.js [코드 보기](https://github.com/wanted-pre-onboarding-09/wanted-codestates-project-9-4/blob/dev/src/components/atoms/Share.js))
+    
+    <img src="https://user-images.githubusercontent.com/87353284/163505563-375a533e-b549-4cb6-aabd-2e9925999665.gif" width="20%" />
+### 배포 링크
+[https://wanted-pre-onboarding-09.github.io/wanted-codestates-project-9-4](https://wanted-pre-onboarding-09.github.io/wanted-codestates-project-9-4)
+### 저장소 링크
+[https://github.com/wanted-pre-onboarding-09/wanted-codestates-project-9-4](https://github.com/wanted-pre-onboarding-09/wanted-codestates-project-9-4)
