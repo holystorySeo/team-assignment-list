@@ -55,7 +55,7 @@
 ### 저장소 링크
 [https://github.com/wanted-pre-onboarding-09/wanted-codestates-project-9-2](https://github.com/wanted-pre-onboarding-09/wanted-codestates-project-9-2)
 
-## 2. 리뷰 등록과 확인 페이지
+## 2. 쇼피몰 리뷰 등록과 확인 페이지
 ### 작업 성과
 - 상세 페이지 마크업과 스타일링 작업 (폴더위치: src/components/organisms/detail [코드 보기](https://github.com/wanted-pre-onboarding-09/wanted-codestates-project-9-9/tree/dev/src/components/organisms/detail))
   
