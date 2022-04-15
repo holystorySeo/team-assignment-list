@@ -113,3 +113,12 @@
 [https://datable-9.netlify.app](https://datable-9.netlify.app)
 ### 저장소 링크
 [https://github.com/wanted-pre-onboarding-09/wanted-codestates-project-9-7-1](https://github.com/wanted-pre-onboarding-09/wanted-codestates-project-9-7-1)
+
+## 4. 기업 & 개인 fit 진달 결과 페이지
+### 작업 성과
+- 모두/본인/회사 Tab 컴포넌트 구현 (파일 위치: src/components/TabSection.vue [코드 보기](https://github.com/wanted-pre-onboarding-09/wanted-codestates-project-9-11/blob/dev/src/components/TabSection.vue))
+   - `v-for` 로 `button` 태그 3개 생성
+   - `v-on:click`으로 클릭된 탭의 `active CSS` 적용
+   - `$emit` 메소드로 Tab index를 ‘자식 컴포넌트(`TabSection.vue`)’에서 ‘부모 컴포넌트(`App.vue`)’로 전달
+
+     <img src="https://user-images.githubusercontent.com/87353284/163503122-bc1ed745-6bf8-4525-bbbd-b4fd2427ff82.gif" width="30%" />
