@@ -400,4 +400,4 @@
 ### [(CSS) Skeleton UI 제작](https://jobcoding.tistory.com/214?category=1011893)
 ### (CSS) Progress Bar Chart 제작(예정)
 ### (CSS) 슬라이딩(feat. 슬라이딩 닷 연동) 제작(예정)
-### (React component) 초기 설계에서 컴포넌트 설정의 중요성(예정)  
+### (React) 초기 설계에서 컴포넌트 설정의 중요성(예정)  
