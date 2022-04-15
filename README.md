@@ -141,3 +141,17 @@
 [https://wanted-pre-onboarding-09.github.io/wanted-codestates-project-9-4](https://wanted-pre-onboarding-09.github.io/wanted-codestates-project-9-4)
 ### 저장소 링크
 [https://github.com/wanted-pre-onboarding-09/wanted-codestates-project-9-4](https://github.com/wanted-pre-onboarding-09/wanted-codestates-project-9-4)
+<br><br>
+## 6. 휴양림 메모 저장 서비스
+### 작업 성과
+- Skeleton UI Loading Component ver.1(파일 위치: src/components/common/Loading.js [코드 보기](https://github.com/wanted-pre-onboarding-09/wanted-codestates-project-9-8/blob/dev/src/components/common/Loading.js))
+- Skeleton UI Loading Component ver.2(파일 위치: src/components/common/Loading2.js [코드 보기](https://github.com/wanted-pre-onboarding-09/wanted-codestates-project-9-8/blob/dev/src/components/common/Loading2.js))
+   - linear-gradient와 keyframes로 version 1 은 background-position, version 2는 background-image를 변화시켜 로딩 효과 구현
+    
+      |version 1|version 2|
+      |:-:|:-:|
+      |<img src="https://user-images.githubusercontent.com/87353284/158618174-61afc828-fd8e-4cf9-941c-f3f2678f23a2.gif" width="30%">|<img src="https://user-images.githubusercontent.com/87353284/158629672-358ac06d-385d-40f1-8beb-58aa299c462e.gif" width="30%">|
+### 배포 링크
+[https://doublenc-9.netlify.app](https://doublenc-9.netlify.app/)
+### 저장소 링크
+[https://github.com/wanted-pre-onboarding-09/wanted-codestates-project-9-8](https://github.com/wanted-pre-onboarding-09/wanted-codestates-project-9-8)
