@@ -155,3 +155,249 @@
 [https://doublenc-9.netlify.app](https://doublenc-9.netlify.app/)
 ### 저장소 링크
 [https://github.com/wanted-pre-onboarding-09/wanted-codestates-project-9-8](https://github.com/wanted-pre-onboarding-09/wanted-codestates-project-9-8)
+<br><br>
+## 7. 간병인 신청하기
+### 작업 성과
+- 돌봄 스케줄 예약 캘린더 기능 구현 (파일 위치: 기업 요청으로 비공개 처리)
+    <details>
+    <summary>캘린더 기능 코드 보기</summary>
+
+    ```jsx
+        import React, { useState } from 'react';
+        import { useDispatch } from 'react-redux';
+        import styles from '../css/Schedule.module.css';
+        import { changeStartDate, changeEndDate } from '../store/scheduleSlice';
+        import CareSelect from './CareSelect';
+
+        const Schedule = () => {
+          const [startDateValue, setStartDateValue] = useState('');
+          const [endDateValue, setEndDateValue] = useState('');
+          const dispatch = useDispatch();
+
+          const StartDateValueHandler = (e) => {
+            const variable = String(e.target.value);
+            setStartDateValue(variable);
+            dispatch(changeStartDate(variable));
+          };
+
+          const EndDateValueHandler = (e) => {
+            const variable = String(e.target.value);
+            setEndDateValue(variable);
+            dispatch(changeEndDate(variable));
+          };
+
+          return (
+            <>
+              <section className={styles.schedule_container}>
+                <div className={styles.schedule_main}>
+                  <div className={styles.date_container}>
+                    <div className={styles.day_container}>
+                      <div className={styles.dayTitle}>시작일</div>
+                      <div className={styles.day}>
+                        <input
+                          type="date"
+                          data-placeholder="날짜 선택"
+                          required
+                          aria-required="true"
+                          value={startDateValue}
+                          className={styles.selectDay}
+                          onChange={StartDateValueHandler}
+                        ></input>
+                      </div>
+                    </div>
+                    <div className={styles.day_container}>
+                      <div className={styles.dayTitle}>종료일</div>
+                      <div className={styles.day}>
+                        <input
+                          type="date"
+                          data-placeholder="날짜 선택"
+                          required
+                          aria-required="true"
+                          value={endDateValue}
+                          className={styles.selectDay}
+                          onChange={EndDateValueHandler}
+                        ></input>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <CareSelect />
+              </section>
+            </>
+          );
+        };
+
+        export default Schedule;
+    ```
+
+    </details>
+- 시작일과 종료일 리덕스 전역 저장소 관리
+    <details>
+    <summary>리덕스 코드 보기</summary>
+
+    ```jsx
+        import { createSlice } from '@reduxjs/toolkit';
+
+        const initialState = {
+          startDate: '', // yyyy-MM-dd
+          endDate: '', // yyyy-MM-dd
+          visitTime: '', // hh:mm:ss
+          hour: 0,
+          startCare: '선택',
+          dayCare: '선택',
+        };
+
+        const scheduleSlice = createSlice({
+          name: 'scheduleSlice',
+          initialState,
+          reducers: {
+            changeStartDate: (state, action) => {
+              state.startDate = action.payload;
+            },
+            changeEndDate: (state, action) => {
+              state.endDate = action.payload;
+            },
+            changeVisitTime: (state, action) => {
+              state.visitTime = action.payload;
+            },
+            changeHour: (state, action) => {
+              state.hour = action.payload;
+            },
+            changeStartCare: (state, action) => {
+              state.startCare = action.payload;
+            },
+            changeDayCare: (state, action) => {
+              state.dayCare = action.payload;
+            },
+            clearDate: () => initialState,
+          },
+        });
+
+        export const {
+          changeStartDate,
+          changeEndDate,
+          changeVisitTime,
+          changeHour,
+          clearDate,
+          changeStartCare,
+          changeDayCare,
+        } = scheduleSlice.actions;
+        export default scheduleSlice.reducer;
+    ```
+
+    </details>
+    
+  <img src="https://user-images.githubusercontent.com/87353284/163510399-7150fa67-047d-45ac-882c-340adda4242a.gif" width="30%" />
+### 배포 링크
+[https://caredoc.netlify.app](https://caredoc.netlify.app)
+### 개선 필요사항
+- 캘린더 라이브러리 적용한 UX 고도화(예, date picker 등)
+- 캘린더 시작일과 종료일 설정 기능 (종료일이 시작일 보다 앞일 수 없음)
+    <br><br>
+## 8. 듀얼 셀렉터 
+### 작업 성과
+- 검색 컴포넌트 구현 (파일 위치: src/components/SearchBar.js [코드 보기](https://github.com/wanted-pre-onboarding-09/wanted-codestates-project-9-3/blob/dev/src/components/SearchBar.js))
+  - 듀얼 셀렉터 왼쪽/오른쪽 검색 기능에 모두 동일 컴포넌트 재사용
+  - section props로 구분
+
+    ```jsx
+       <SearchBar section="left" />
+       <SearchBar section="right" />
+    ```
+
+    <img src="https://user-images.githubusercontent.com/87353284/158937078-899f6a8b-bbb8-43d8-952e-0b195b5c551b.gif" width="40%">
+
+- 왼쪽 셀렉터 검색 기능 알고리즘 구현(feat. 리덕스 리듀서 함수, 파일명: optionSlice.js, 리듀서: updateLeftSearch)
+
+  - 오른쪽 셀렉터에 아무것도 없는 경우: 초기 옵션중을 filter함수로 순회하여 검색어 포함 여부 indexOf로 판별
+  - 오른쪽 셀렉터에 요소가 있는 경우: 1)초기 옵션에서 오른쪽 셀렉터 요소 필터 2)필터 후 남은 요소 중에서 검색어 포함 여부 indexOf로 판별
+  - 함수 체이닝으로 변수 선언 줄이고 코드 간결화
+    <details>
+    <summary>왼쪽 셀렉터 검색 기능 리듀서 코드 자세히 보기</summary>
+
+    ```jsx
+      availableOptions: emojiMenus, /* 왼쪽 셀럭터 옵션 */
+      selectedOptions: [], /* 오른쪽 셀럭터 옵션 */
+
+      updateLeftSearch(state, action) {
+        // 오른쪽 옵션에 아무것도 없는 경우
+        if (state.selectedOptions.length === 0) {
+          state.availableOptions = [
+    	  ...emojiMenus.filter((option) => {
+    	    return option.name.indexOf(action.payload) !== -1;
+    	  }),
+    	];
+        } else {
+          /* 오른쪽 옵션에 요소가 있는 경우 */
+    	const newArr = emojiMenus
+    	  .filter((option) => {
+    	    return (
+    	      state.selectedOptions
+    		.map((el) => {
+    		  return el.name;
+    		})
+    		.indexOf(option.name) === -1
+    	    );
+    	  })
+    	  .filter((option) => {
+    	    return option.name.indexOf(action.payload) !== -1;
+    	  });
+
+    	state.availableOptions = [...newArr];
+          }
+        },
+    ```
+
+    </details>
+
+- 오른쪽 셀렉터 검색 기능 알고리즘 구현(feat. 리덕스 리듀서 함수, 파일명: optionSlice.js, 리듀서: updateRightSearch)
+
+  - 왼쪽 셀렉터에 아무것도 없는 경우: 오른쪽 셀렉터를 filter함수로 순회하여 검색어 포함 여부 indexOf로 판별
+  - 왼쪽 셀렉터에 요소가 있는 경우: 1)초기 옵션에서 왼쪽 셀렉터 요소 필터 2)필터 후 남은 요소 중에서 검색어 포함 여부 indexOf로 판별
+  - 함수 체이닝으로 변수 선언 줄이고 코드 간결화
+    <details>
+    <summary>오른쪽 셀렉터 검색 기능 리듀서 코드 자세히 보기</summary>
+
+    ```jsx
+      availableOptions: emojiMenus, /* 왼쪽 셀럭터 옵션 */
+      selectedOptions: [], /* 오른쪽 셀럭터 옵션 */
+
+       updateRightSearch(state, action) {
+          // 왼쪽 옵션에 아무것도 없는 경우
+          if (state.availableOptions.length === 0) {
+    	state.selectedOptions = [
+    	  ...emojiMenus.filter((option) => {
+    	    return option.name.indexOf(action.payload) !== -1;
+    	  }),
+    	];
+          } else {
+    	const newArr = emojiMenus
+    	  .filter((option) => {
+    	    return (
+    	      state.availableOptions
+    		.map((el) => {
+    		  return el.name;
+    		})
+    		.indexOf(option.name) === -1
+    	    );
+    	  })
+    	  .filter((option) => {
+    	    return option.name.indexOf(action.payload) !== -1;
+    	  });
+
+    	state.selectedOptions = [...newArr];
+          }
+        },
+    ```
+
+    </details>
+### 배포 링크
+[https://logpreesso-9.netlify.app](https://logpreesso-9.netlify.app)
+### 저장소 링크
+[https://github.com/wanted-pre-onboarding-09/wanted-codestates-project-9-3](https://github.com/wanted-pre-onboarding-09/wanted-codestates-project-9-3)
+<br><br>
+## 생산 콘텐츠
+### [(CSS) Skeleton UI 제작](https://jobcoding.tistory.com/214?category=1011893)
+### (CSS) Progress Bar Chart 제작(예)
+### (CSS) 슬라이딩(feat. 슬라이딩 닷 연동) 제작(예정)
+### (React component) 초기 설계에서 컴포넌트 설정의 중요성(예정)  
